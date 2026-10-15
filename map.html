@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Walk the City — Street Script</title>
+  <meta name="description" content="Real chalk messages found across New York City.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vendor/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="walk-page">
+  <!-- ===== HEADER (same on every page; change aria-current to mark the active link) ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">Street Script</a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="map.html" aria-current="page">Enter the streets</a>
+      <a href="explore.html">Explore</a>
+      <a href="leave.html">Leave a message</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </header>
+  <div class="menu-overlay" id="menu">
+    <nav aria-label="Menu">
+            <a href="map.html">Enter the streets <small>01</small></a>
+      <a href="explore.html">Explore <small>02</small></a>
+      <a href="leave.html">Leave a message <small>03</small></a>
+      <a href="about.html">About <small>04</small></a>
+    </nav>
+    <div class="menu-about">
+      <h2>The city leaves messages.</h2>
+      <p>Street Script is a collection of real chalk messages found across New York City, and what they meant to the people who walked past them.</p>
+      <a class="text-link" href="about.html">Read about the project</a>
+    </div>
+  </div>
+
+
+  <main class="walk">
+    <!-- LEFT: title, legend -->
+    <section class="walk-left">
+      <div class="eyebrow"><span class="num">01</span>Enter the streets</div>
+      <h1 class="display">Walk<br><span class="brush">the city</span></h1>
+      <p class="lede">Move through the city, discover hidden messages, and see what people have left behind.</p>
+      <div class="walk-legend">
+        <span><i class="dot red"></i>New message</span>
+        <span><i class="dot yellow"></i>Explored</span>
+      </div>
+    </section>
+
+    <!-- MIDDLE: the map -->
+    <section class="walk-map" id="map" aria-label="Map of Manhattan with street messages"></section>
+
+    <!-- RIGHT: strip of messages -->
+    <aside class="walk-strip" id="strip" aria-label="All messages"></aside>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/data-more.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/vendor/leaflet.js"></script>
+  <script src="js/nyc-map.js"></script>
+  <script src="js/nyc-streets.js"></script>
+  <script src="js/walk.js"></script>
+</body>
+</html>

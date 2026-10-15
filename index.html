@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Street Script</title>
+  <meta name="description" content="Real chalk messages found across New York City.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+
+  <!-- ===== HEADER (same on every page; change aria-current to mark the active link) ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">Street Script</a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="map.html">Enter the streets</a>
+      <a href="explore.html">Explore</a>
+      <a href="leave.html">Leave a message</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </header>
+  <div class="menu-overlay" id="menu">
+    <nav aria-label="Menu">
+            <a href="map.html">Enter the streets <small>01</small></a>
+      <a href="explore.html">Explore <small>02</small></a>
+      <a href="leave.html">Leave a message <small>03</small></a>
+      <a href="about.html">About <small>04</small></a>
+    </nav>
+    <div class="menu-about">
+      <h2>The city leaves messages.</h2>
+      <p>Street Script is a collection of real chalk messages found across New York City, and what they meant to the people who walked past them.</p>
+      <a class="text-link" href="about.html">Read about the project</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-photo" role="img" aria-label="The Brooklyn Bridge and the Lower Manhattan skyline at night"></div>
+      <div class="hero-content">
+        <div class="hero-copy">
+          <!-- the red heartbeat line -->
+          <svg class="hero-pulse" viewBox="0 0 480 80" fill="none" aria-hidden="true">
+            <path d="M2 72 L82 72 L102 76 L127 4 L157 64 L185 72 L478 72" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h1>The city<br>leaves<br>messages.<br>You just<br>have to<br><span class="brush">slow down.</span></h1>
+          <p class="lede">Street Script is a collection of real messages found across New York City. Explore the city, discover what people have left behind, and leave a message of your own.</p>
+        </div>
+        <a class="hero-enter" href="map.html">
+          <span class="round" id="enter-arrow"></span>
+          <span>Enter<br>the streets</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="js/data.js"></script>
+  <script src="js/data-more.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    // put the arrow icon into each round button
+    document.querySelectorAll("#enter-arrow").forEach(el => el.innerHTML = ARROW);
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Street Script</title>
+  <meta name="description" content="Real chalk messages found across New York City.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ===== HEADER (same on every page; change aria-current to mark the active link) ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">Street Script</a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="map.html">Enter the streets</a>
+      <a href="explore.html">Explore</a>
+      <a href="leave.html">Leave a message</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </header>
+  <div class="menu-overlay" id="menu">
+    <nav aria-label="Menu">
+            <a href="map.html">Enter the streets <small>01</small></a>
+      <a href="explore.html">Explore <small>02</small></a>
+      <a href="leave.html">Leave a message <small>03</small></a>
+      <a href="about.html" aria-current="page">About <small>04</small></a>
+    </nav>
+    <div class="menu-about">
+      <h2>The city leaves messages.</h2>
+      <p>Street Script is a collection of real chalk messages found across New York City, and what they meant to the people who walked past them.</p>
+      <a class="text-link" href="about.html">Read about the project</a>
+    </div>
+  </div>
+
+
+  <main class="wrap about-page">
+    <div class="about-top">
+      <div class="about-left">
+    <section class="about-hero">
+      <div class="eyebrow"><span class="num">04</span>About</div>
+      <h1 class="display" style="margin-top:18px">Same words,<br>different <span class="brush">people.</span></h1>
+      <p class="lede">Street Script is a collection of real messages found across New York City: chalk on sidewalks, notes taped to lamp posts, words painted on utility boxes. Most of them wash away in the next rain.</p>
+    </section>
+
+    <section class="about-band">
+      <div>
+        <h2>Why it exists</h2>
+        <p>Street writing has long been a way for people to share hope, thoughts and personal reflections in public spaces. Someone stops, writes a few words for a stranger, and walks away. Thousands of people walk past. A few of them really need it.</p>
+        <p>Street Script collects these small messages before they disappear, and asks the people who found them one question: <em>what did it mean to you?</em> The same three words can mean a job offer to one person and a breakup to another.</p>
+        <p class="muted">A project by Parissa Bansal, Parsons School of Design.</p>
+      </div>
+    </section>
+      </div>
+      <img class="about-photo" src="images/messages/trust-the-timing-poster.jpg" alt="A handwritten note reading 'Trust the timing' taped to a lamp post, with the Empire State Building in the distance">
+    </div>
+
+    <section class="ways">
+      <div class="ways-head">
+        <div class="eyebrow"><span class="num">00</span>Two ways in</div>
+      </div>
+      <div class="ways-grid">
+        <a class="way" href="map.html">
+          <img class="way-bg" src="images/messages/you-got-this-box.jpg" alt="">
+          <span class="num">01</span>
+          <div><h3>Enter the streets</h3><p>Pick what you need today: a sign, some love, a laugh or a push. Then flip through the messages that fit.</p></div>
+          <span class="round yellow arrow-slot"></span>
+        </a>
+        <a class="way" href="leave.html">
+          <img class="way-bg" src="images/messages/dream-bigger.jpg" alt="">
+          <span class="num">02</span>
+          <div><h3>Leave a message</h3><p>Write what someone might need to hear today and add it to the city.</p></div>
+          <span class="round arrow-slot"></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Street Script — New York City</span>
+    <span>Messages photographed on the streets of Manhattan</span>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/data-more.js"></script>
+  <script src="js/common.js"></script>
+  <script>document.querySelectorAll(".arrow-slot").forEach(el => el.innerHTML = ARROW);</script>
+</body>
+</html>
